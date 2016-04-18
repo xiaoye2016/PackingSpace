@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaoye.dao.VenderUserDao">
+       <!--  新增记录  -->
+       <insert id="insertVenderUser" parameterType="VenderUser">
+
+       </insert>
+       <!--  校验用户名和密码  -->
+       <select timeout="10" id="validVenderUserNameAndPassword" resultType="int">
+              select count(*) from vender_user where account = #{account} and password = #{password}
+       </select>
+
+        <select timeout="10" id="getVenderUserByAccount" parameterType="string" resultType="VenderUser">
+            select id,userId,account,nickName,type,phone,email,gender,carCode
+            from vender_user
+            where status = 1 and account = #{account}
+        </select>
+</mapper>
