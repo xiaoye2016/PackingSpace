@@ -12,4 +12,8 @@ public interface VenderUserDao {
     Integer validVenderUserNameAndPassword(@Param("account")String account,@Param("password")String password);
 
     VenderUser getVenderUserByAccount(String account);
+
+    Integer existAccount(String account);
+
+    void insert(VenderUser venderUser);
 }

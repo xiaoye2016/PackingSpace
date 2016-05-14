@@ -6,6 +6,7 @@ package com.xiaoye.domain;
 public class VenderUser {
     private Long id;
     private String userId;
+    private String password;
     private String account;
     private String nickName;
     private Integer type;
@@ -20,6 +21,14 @@ public class VenderUser {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getUserId() {

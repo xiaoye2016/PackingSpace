@@ -9,4 +9,8 @@ public interface VenderUserService {
     Boolean validVenderUserNameAndPassword(String name,String password);
 
     VenderUser getVenderUserByAccount(String account);
+
+    Boolean existAccount(String account);
+
+    void register(VenderUser venderUser);
 }
